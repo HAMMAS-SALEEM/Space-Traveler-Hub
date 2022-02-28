@@ -20,6 +20,20 @@ const Nav = () => (
     >
       Profile
     </NavLink>
+    <NavLink
+      exact
+      to="/missions"
+      style={({ isActive }) => (isActive ? { color: 'red' } : { color: 'blue' })}
+    >
+      Missions
+    </NavLink>
+    <NavLink
+      exact
+      to="/rockets"
+      style={({ isActive }) => (isActive ? { color: 'red' } : { color: 'blue' })}
+    >
+      Rockets
+    </NavLink>
   </nav>
 );
 export default Nav;
