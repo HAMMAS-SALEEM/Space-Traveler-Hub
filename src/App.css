@@ -25,9 +25,9 @@ ul li {
 .nav-container {
   display: flex;
   justify-content: space-between;
-align-items: center;
+  align-items: center;
 }
 
-#nav-image{
+#nav-image {
   width: 50px;
 }
