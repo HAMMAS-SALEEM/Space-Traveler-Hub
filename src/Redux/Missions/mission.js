@@ -1,8 +1,14 @@
 const GET_API = 'data/missions/GET_API';
+const JOIN_MISSION = 'data/mission/JOIN_MISSION';
 
-export const getAPI = (playload) => ({
+export const getAPI = (payload) => ({
   type: GET_API,
-  playload,
+  payload,
+});
+
+export const joinMission = (payload) => ({
+  type: JOIN_MISSION,
+  payload,
 });
 
 const initialState = [];
@@ -10,7 +16,9 @@ const initialState = [];
 const missionReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_API:
-      return [...state, ...action.playload];
+      return [...state, ...action.payload];
+    case JOIN_MISSION:
+      return [...state, action.payload];
     default:
       return state;
   }
