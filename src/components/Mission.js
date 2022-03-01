@@ -15,16 +15,16 @@ const Mission = () => {
       });
   }, []);
   return (
-        <ul className="rocket-container">
-          {store.map((mission) => (
-            <li key={mission.mission_id}>
-              <ul>
-                <li>{mission.mission_name}</li>
-                <li>{mission.description}</li>
-              </ul>
-            </li>
-          ))}
-        </ul>
+    <ul className="rocket-container">
+      {store.map((mission) => (
+        <li key={mission.mission_id}>
+          <ul>
+            <li>{mission.mission_name}</li>
+            <li>{mission.description}</li>
+          </ul>
+        </li>
+      ))}
+    </ul>
   );
 };
 export default Mission;
