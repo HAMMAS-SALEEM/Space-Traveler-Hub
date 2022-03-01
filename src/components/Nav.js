@@ -7,28 +7,24 @@ const Nav = () => (
     <img src={planet} alt="planet" id="nav-image" />
     <div className="navlink-container">
       <NavLink
-        exact
         to="/"
         style={({ isActive }) => (isActive ? { color: 'red' } : { color: 'blue' })}
       >
         Home
       </NavLink>
       <NavLink
-        exact
         to="/profile"
         style={({ isActive }) => (isActive ? { color: 'red' } : { color: 'blue' })}
       >
         Profile
       </NavLink>
       <NavLink
-        exact
         to="/missions"
         style={({ isActive }) => (isActive ? { color: 'red' } : { color: 'blue' })}
       >
         Missions
       </NavLink>
       <NavLink
-        exact
         to="/rockets"
         style={({ isActive }) => (isActive ? { color: 'red' } : { color: 'blue' })}
       >
