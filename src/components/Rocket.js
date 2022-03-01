@@ -19,9 +19,15 @@ const Mission = () => {
       {store.map((rocket) => (
         <li key={rocket.id}>
           <ul>
-            <li>{rocket.rocket_name}</li>
             <li>
-              <img src={rocket.flickr_images[0]} alt="" />
+              <h2>{rocket.rocket_name}</h2>
+            </li>
+            <li>
+              <img
+                src={rocket.flickr_images[0]}
+                alt="rocket"
+                className="rocket-image"
+              />
             </li>
           </ul>
         </li>
