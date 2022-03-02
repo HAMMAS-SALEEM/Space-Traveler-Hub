@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAPI } from '../Redux/Rocket/rocket';
 
@@ -15,7 +16,7 @@ const Mission = () => {
       });
   }, []);
   return (
-    <ul className="rocket-container">
+    <motion.ul layout className="rocket-container">
       {store.map((rocket) => (
         <li key={rocket.id}>
           <ul>
@@ -32,7 +33,7 @@ const Mission = () => {
           </ul>
         </li>
       ))}
-    </ul>
+    </motion.ul>
   );
 };
 export default Mission;

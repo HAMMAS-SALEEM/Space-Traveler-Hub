@@ -6,8 +6,8 @@ const Mission = () => {
   const store = useSelector((state) => state.missionReducer);
   const dispatch = useDispatch();
   const submitMission = (id) => {
-    const newState = store.map((rocket) => {
-      if (rocket.id !== id) return rocket;
+    const newState = store.filter((rocket) => {
+      if (rocket !== id) return rocket;
       return { ...rocket, reserved: true };
     });
     dispatch(joinMission(newState));
@@ -28,7 +28,7 @@ const Mission = () => {
       });
   }, []);
   return (
-    <ul className="rocket-container">
+    <ul className="mission-container">
       {store.map((mission) => (
         <li key={mission.mission_id}>
           <ul>
