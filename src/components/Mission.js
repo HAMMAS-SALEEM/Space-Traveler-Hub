@@ -32,7 +32,7 @@ const Mission = () => {
               onClick={joinMissionHandler}
               id={mission.mission_id}
             >
-              Join Mission
+              Join mission 
             </button>
           </ul>
 
