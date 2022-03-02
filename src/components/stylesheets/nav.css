@@ -5,9 +5,9 @@
 }
 
 .nav-logo {
-    display: flex;
-    justify-content: space-between;
-    width: 300px;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
 }
 
 #nav-image {
@@ -20,4 +20,8 @@
   padding: 0.5rem 1rem;
   color: rgb(65, 98, 168);
   font-weight: bold;
+}
+
+.nav-bottom-line {
+  margin: 25px 0;
 }

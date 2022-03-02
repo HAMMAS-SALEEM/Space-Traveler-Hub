@@ -24,10 +24,7 @@ const Mission = () => {
     <motion.ul layout className="rocket-container">
       {store.map((rocket) => (
         <li key={rocket.id}>
-          <ul>
-            <li>
-              <h2>{rocket.rocket_name}</h2>
-            </li>
+          <ul className="rocket-contents">
             <li>
               <img
                 src={rocket.flickr_images[0]}
@@ -35,7 +32,29 @@ const Mission = () => {
                 className="rocket-image"
               />
             </li>
-            <li><button id={rocket.id} type="button" onClick={joinRocketHandler}>{rocket.reserved ? 'Cancel Reservation' : 'Reserve'}</button></li>
+            <li className="rocket-details">
+              <ul>
+                <li>
+                  <h2 className="rocket-name">{rocket.rocket_name}</h2>
+                </li>
+                <li>
+                  <p className="rocket-description">
+                    {rocket.reserved ? <span className="reserve-badge">Reserved</span> : ''}
+                    {rocket.description}
+                  </p>
+                </li>
+                <li>
+                  <input
+                    id={rocket.id}
+                    type="button"
+                    onClick={joinRocketHandler}
+                    className={rocket.reserved ? 'cancel-reservation-btn' : 'reserve-btn'}
+                    value={rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
+                  />
+
+                </li>
+              </ul>
+            </li>
           </ul>
         </li>
       ))}
