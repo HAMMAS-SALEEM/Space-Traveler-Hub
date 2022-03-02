@@ -11,7 +11,7 @@ const Nav = () => (
         to="/"
         style={({ isActive }) => (isActive ? { color: 'gray' } : { color: 'black' })}
       >
-        Home
+        Rockets
       </NavLink>
       <NavLink
         id="links"
@@ -26,13 +26,6 @@ const Nav = () => (
         style={({ isActive }) => (isActive ? { color: 'gray' } : { color: 'black' })}
       >
         Missions
-      </NavLink>
-      <NavLink
-        id="links"
-        to="/rockets"
-        style={({ isActive }) => (isActive ? { color: 'gray' } : { color: 'black' })}
-      >
-        Rockets
       </NavLink>
     </div>
   </nav>
