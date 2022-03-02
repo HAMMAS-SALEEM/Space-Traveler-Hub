@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+button {
+  cursor: pointer;
+}
+
 h2 {
   font-size: 0.8rem;
 }
@@ -50,14 +54,4 @@ ul li {
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
-}
-
-.mission-piece button.active {
-  background: rgb(65, 98, 168);
-  color: white;
-}
-
-.active {
-  background-color: #61dbfb;
-  color: white;
 }
