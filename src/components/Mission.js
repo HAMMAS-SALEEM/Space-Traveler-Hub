@@ -22,36 +22,39 @@ const Mission = () => {
       });
   }, []);
   return (
-    <motion.table layout className="mission-container">
-      <thead>
-        <tr>
-          <th>Mission</th>
-          <th>Description</th>
-          <th>Status</th>
-          <th> </th>
-        </tr>
-      </thead>
-      {store.map((mission, index) => (
-        <tbody key={mission.mission_id} style={index % 2 === 1 ? { background: '' } : { background: 'rgb(231, 231, 231)' }}>
-          <tr className="mission-piece">
-            <td className="mission-name"><h2>{mission.mission_name}</h2></td>
-            <td className="mission-description">{mission.description}</td>
-            <td><button type="button" className={mission.reserved ? 'member-badge' : 'non-member-badge'} disabled>{mission.reserved ? 'Active Member' : 'Not A Member'}</button></td>
-            <td>
-              <button
-                type="button"
-                onClick={joinMissionHandler}
-                id={mission.mission_id}
-                className={mission.reserved ? 'leave-mission-btn' : 'join-mission-btn'}
-              >
-                {mission.reserved ? 'Leave Mission' : 'Join Mission'}
-              </button>
-            </td>
+    <>
+      <hr className="mission-table-line" />
+      <motion.table layout className="mission-container">
+        <thead>
+          <tr>
+            <th>Mission</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th> </th>
           </tr>
+        </thead>
+        {store.map((mission, index) => (
+          <tbody key={mission.mission_id} style={index % 2 === 1 ? { background: '' } : { background: 'rgb(231, 231, 231)' }}>
+            <tr className="mission-piece">
+              <td className="mission-name"><h2>{mission.mission_name}</h2></td>
+              <td className="mission-description">{mission.description}</td>
+              <td><button type="button" className={mission.reserved ? 'member-badge' : 'non-member-badge'} disabled>{mission.reserved ? 'Active Member' : 'Not A Member'}</button></td>
+              <td>
+                <button
+                  type="button"
+                  onClick={joinMissionHandler}
+                  id={mission.mission_id}
+                  className={mission.reserved ? 'leave-mission-btn' : 'join-mission-btn'}
+                >
+                  {mission.reserved ? 'Leave Mission' : 'Join Mission'}
+                </button>
+              </td>
+            </tr>
 
-        </tbody>
-      ))}
-    </motion.table>
+          </tbody>
+        ))}
+      </motion.table>
+    </>
   );
 };
 export default Mission;
