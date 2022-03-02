@@ -21,14 +21,21 @@ const Mission = () => {
       });
   }, []);
   return (
-    <motion.ul layout className="mission-container">
+    <motion.table layout className="mission-container">
+      <thead>
+        <tr>
+          <th>Mission</th>
+          <th>Description</th>
+          <th>Status</th>
+        </tr>
+      </thead>
       {store.map((mission) => (
-        <li key={mission.mission_id} className="mission-piece">
-          <ul>
-            <li><h2>{mission.mission_name}</h2></li>
-            <li>{mission.description}</li>
-            <li><button type="button" disabled>{mission.reserved ? 'Active Member' : 'Not A Member'}</button></li>
-            <li>
+        <tbody key={mission.mission_id}>
+          <tr className="mission-piece">
+            <td><h2>{mission.mission_name}</h2></td>
+            <td>{mission.description}</td>
+            <td><button type="button" disabled>{mission.reserved ? 'Active Member' : 'Not A Member'}</button></td>
+            <td>
               <button
                 type="button"
                 onClick={joinMissionHandler}
@@ -36,12 +43,12 @@ const Mission = () => {
               >
                 {mission.reserved ? 'Leave Mission' : 'Join Mission'}
               </button>
-            </li>
-          </ul>
+            </td>
+          </tr>
 
-        </li>
+        </tbody>
       ))}
-    </motion.ul>
+    </motion.table>
   );
 };
 export default Mission;

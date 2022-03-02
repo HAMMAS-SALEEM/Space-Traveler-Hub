@@ -52,13 +52,6 @@ ul li {
   text-decoration: none;
 }
 
-.mission-piece {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 30px;
-}
-
 .mission-piece button.active {
   background: rgb(65, 98, 168);
   color: white;
