@@ -1,11 +1,15 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useSelector, useDispatch } from 'react-redux';
-import { getAPI } from '../Redux/Rocket/rocket';
+import { getAPI, joinRocket } from '../Redux/Rocket/rocket';
 
 const Mission = () => {
   const store = useSelector((state) => state.rocketReducer);
   const dispatch = useDispatch();
+  const joinRocketHandler = (e) => {
+    const { id } = e.target;
+    dispatch(joinRocket({ id }));
+  };
   useEffect(() => {
     fetch('https://api.spacexdata.com/v3/rockets')
       .then((res) => res.json())
@@ -30,6 +34,7 @@ const Mission = () => {
                 className="rocket-image"
               />
             </li>
+            <li><button id={rocket.id} type="button" onClick={joinRocketHandler}>{rocket.reserved ? 'Cancel Reservation' : 'Reserve'}</button></li>
           </ul>
         </li>
       ))}
