@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAPI, joinRocket } from '../Redux/Rocket/rocket';
+import './stylesheets/rocket.css';
 
 const Mission = () => {
   const store = useSelector((state) => state.rocketReducer);

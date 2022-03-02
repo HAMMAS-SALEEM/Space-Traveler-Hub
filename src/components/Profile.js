@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import './stylesheets/profile.css';
 
 const Profile = () => {
   const rocket = useSelector((state) => state.rocketReducer);

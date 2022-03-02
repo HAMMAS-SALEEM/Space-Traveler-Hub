@@ -1,29 +1,33 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import planet from './assets/planet.png';
+import './stylesheets/nav.css';
 
 const Nav = () => (
   <nav className="nav-container">
-    <img src={planet} alt="planet" id="nav-image" />
+    <div className="nav-logo">
+      <img src={planet} alt="planet" id="nav-image" />
+      <h1 className="nav-title">Space Traveler&lsquo;s Hub</h1>
+    </div>
     <div className="navlink-container">
       <NavLink
-        id="links"
+        className="links"
         to="/"
-        style={({ isActive }) => (isActive ? { color: 'gray' } : { color: 'black' })}
+        style={({ isActive }) => (isActive ? { textDecoration: 'underline' } : { textDecoration: 'none' })}
       >
         Rockets
       </NavLink>
       <NavLink
-        id="links"
+        className="links"
         to="/profile"
-        style={({ isActive }) => (isActive ? { color: 'gray' } : { color: 'black' })}
+        style={({ isActive }) => (isActive ? { textDecoration: 'underline' } : { textDecoration: 'none' })}
       >
         Profile
       </NavLink>
       <NavLink
-        id="links"
+        className="links"
         to="/missions"
-        style={({ isActive }) => (isActive ? { color: 'gray' } : { color: 'black' })}
+        style={({ isActive }) => (isActive ? { textDecoration: 'underline' } : { textDecoration: 'none' })}
       >
         Missions
       </NavLink>
