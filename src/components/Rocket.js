@@ -44,13 +44,14 @@ const Mission = () => {
                   </p>
                 </li>
                 <li>
-                  <input
+                  <button
                     id={rocket.id}
                     type="button"
                     onClick={joinRocketHandler}
                     className={rocket.reserved ? 'cancel-reservation-btn' : 'reserve-btn'}
-                    value={rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
-                  />
+                  >
+                    {rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
+                  </button>
 
                 </li>
               </ul>
