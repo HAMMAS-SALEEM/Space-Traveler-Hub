@@ -27,13 +27,16 @@ const Mission = () => {
           <ul>
             <li><h2>{mission.mission_name}</h2></li>
             <li>{mission.description}</li>
-            <button
-              type="button"
-              onClick={joinMissionHandler}
-              id={mission.mission_id}
-            >
-              {mission.reserved ? 'Leave Mission' : 'Join Mission'}
-            </button>
+            <li><button type="button" disabled>{mission.reserved ? 'Active Member' : 'Not A Member'}</button></li>
+            <li>
+              <button
+                type="button"
+                onClick={joinMissionHandler}
+                id={mission.mission_id}
+              >
+                {mission.reserved ? 'Leave Mission' : 'Join Mission'}
+              </button>
+            </li>
           </ul>
 
         </li>
