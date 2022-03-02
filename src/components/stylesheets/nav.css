@@ -1,0 +1,28 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+}
+
+#nav-image {
+  width: 50px;
+}
+
+.links {
+  margin-right: 2rem;
+  min-width: 5rem;
+  padding: 0.5rem 1rem;
+  color: rgb(65, 98, 168);
+  font-weight: bold;
+}
+
+.nav-bottom-line {
+  margin: 25px 0;
+}
