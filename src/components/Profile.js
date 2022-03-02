@@ -9,12 +9,12 @@ const Profile = () => {
     <section className="profile-container">
       <table className="profile-mission-container">
 
-        <thead><tr><th className="table-heading"><h2>Missions</h2></th></tr></thead>
+        <thead><tr><th className="table-heading"><h2 className="h2">Missions</h2></th></tr></thead>
         <tbody className="profile-table-body">
           {mission.map((mission) => {
             if (mission.reserved === true) {
               return (
-                <tr key={mission.mission_id}><td>{mission.mission_name}</td></tr>
+                <tr key={mission.mission_id}><td className="table-mission-name">{mission.mission_name}</td></tr>
               );
             }
             return null;
@@ -22,12 +22,12 @@ const Profile = () => {
         </tbody>
       </table>
       <table className="profile-rocket-container">
-        <thead><tr><th className="table-heading"><h2>Rockets</h2></th></tr></thead>
+        <thead><tr><th className="table-heading"><h2 className="h2">Rockets</h2></th></tr></thead>
         <tbody>
           {rocket.map((rocket) => {
             if (rocket.reserved === true) {
               return (
-                <tr key={rocket.rocket_id}><td>{rocket.rocket_name}</td></tr>
+                <tr key={rocket.rocket_id}><td className="table-rocket-name">{rocket.rocket_name}</td></tr>
               );
             }
             return null;

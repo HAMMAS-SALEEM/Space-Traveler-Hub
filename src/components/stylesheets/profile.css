@@ -1,25 +1,16 @@
 .profile-container {
   display: flex;
   justify-content: space-evenly;
+  align-items: flex-start;
 }
 
 .table-heading {
   border: none;
 }
 
-h2 {
-  font-size: 24px;
-}
-
-.profile-table-body tbody:first-child,
-td {
-  border-radius: 5px 5px 0 0;
-}
-
 td {
   width: 400px;
   height: 50px;
-  padding-left: 10px;
   font-weight: 500;
   font-size: 15px;
   color: grey;
@@ -28,4 +19,9 @@ td {
 .profile-rocket-container,
 .profile-mission-container {
   border-collapse: collapse;
+  padding-left: 10px;
+}
+
+.h2 {
+    font-size: 24px;
 }
