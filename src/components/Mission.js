@@ -1,21 +1,14 @@
 import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAPI, joinMission } from '../Redux/Missions/mission';
 
 const Mission = () => {
   const store = useSelector((state) => state.missionReducer);
   const dispatch = useDispatch();
-  const submitMission = (id) => {
-    const newState = store.filter((rocket) => {
-      if (rocket !== id) return rocket;
-      return { ...rocket, reserved: true };
-    });
-    dispatch(joinMission(newState));
-  };
-
   const joinMissionHandler = (e) => {
     const { id } = e.target;
-    submitMission(id);
+    dispatch(joinMission({ id }));
   };
 
   useEffect(() => {
@@ -28,11 +21,11 @@ const Mission = () => {
       });
   }, []);
   return (
-    <ul className="mission-container">
+    <motion.ul layout className="mission-container">
       {store.map((mission) => (
-        <li key={mission.mission_id}>
+        <li key={mission.mission_id} className="mission-piece">
           <ul>
-            <li>{mission.mission_name}</li>
+            <li><h2>{mission.mission_name}</h2></li>
             <li>{mission.description}</li>
             <button
               type="button"
@@ -42,9 +35,10 @@ const Mission = () => {
               Join Mission
             </button>
           </ul>
+
         </li>
       ))}
-    </ul>
+    </motion.ul>
   );
 };
 export default Mission;

@@ -18,7 +18,12 @@ const missionReducer = (state = initialState, action) => {
     case GET_API:
       return [...state, ...action.payload];
     case JOIN_MISSION:
-      return [...state, action.payload];
+      return state.map((mission) => {
+        if (mission.mission_id === action.payload.id) {
+          return { ...mission, reserved: true };
+        }
+        return mission;
+      });
     default:
       return state;
   }
