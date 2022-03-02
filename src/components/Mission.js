@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAPI, joinMission } from '../Redux/Missions/mission';
+import './stylesheets/mission.css';
 
 const Mission = () => {
   const store = useSelector((state) => state.missionReducer);
@@ -27,13 +28,14 @@ const Mission = () => {
           <th>Mission</th>
           <th>Description</th>
           <th>Status</th>
+          <th> </th>
         </tr>
       </thead>
       {store.map((mission) => (
         <tbody key={mission.mission_id}>
           <tr className="mission-piece">
-            <td><h2>{mission.mission_name}</h2></td>
-            <td>{mission.description}</td>
+            <td className="mission-name"><h2>{mission.mission_name}</h2></td>
+            <td className="mission-description">{mission.description}</td>
             <td><button type="button" disabled>{mission.reserved ? 'Active Member' : 'Not A Member'}</button></td>
             <td>
               <button

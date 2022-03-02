@@ -1,0 +1,18 @@
+th, td {
+    border: 1px solid rgb(151, 151, 151);
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+}
+
+.mission-name {
+    vertical-align: text-top;
+    width: 100px;
+}
+
+.mission-description {
+    font-size: 13px;
+    font-weight: 500;
+}
