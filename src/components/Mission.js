@@ -32,7 +32,7 @@ const Mission = () => {
               onClick={joinMissionHandler}
               id={mission.mission_id}
             >
-              Join mission 
+              {mission.reserved ? 'Leave Mission' : 'Join Mission'}
             </button>
           </ul>
 
