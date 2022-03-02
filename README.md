@@ -2,7 +2,9 @@
 
 This is a type of web app that serves the facility to reserve rockets and join missions build by React.js library.
 
-![SCREENSHOT]()
+![SCREENSHOT](https://raw.githubusercontent.com/microverseinc/curriculum-react-redux/main/group-project/images/space-travelers__rockets.png?token=GHSAT0AAAAAABR6DPBVXYCK4NBLMF5QX36AYRI722Q)
+![SCREENSHOT](https://raw.githubusercontent.com/microverseinc/curriculum-react-redux/main/group-project/images/space-travelers__missions.png?token=GHSAT0AAAAAABR6DPBU5XDOZYGFIY5PFRNQYRI724Q)
+![SCREENSHOT](https://raw.githubusercontent.com/microverseinc/curriculum-react-redux/main/group-project/images/space-travelers__my-profile.png?token=GHSAT0AAAAAABR6DPBV64JPIVIGD7GO54FSYRI726A)
 
 ## Built With
 
