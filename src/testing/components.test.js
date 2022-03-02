@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -10,13 +10,13 @@ import Profile from '../components/Profile';
 import Rocket from '../components/Rocket';
 
 describe('Render All Components', () => {
-    test('render navbar', () => {
-      const { container, getByText } = render(
-        <MemoryRouter>
-          <Nav />
-        </MemoryRouter>,
-      )
-      expect(container.firstChild).toMatchInlineSnapshot(`
+  test('render navbar', () => {
+    const { container } = render(
+      <MemoryRouter>
+        <Nav />
+      </MemoryRouter>,
+    );
+    expect(container.firstChild).toMatchInlineSnapshot(`
 <nav
   class="nav-container"
 >
@@ -64,15 +64,15 @@ describe('Render All Components', () => {
 `);
   });
 
-        test('render missions', () => {
-          const { container, getByText } = render(
-            <MemoryRouter>
-                <Provider store={store}>
-                <Mission />
-                </Provider>
-            </MemoryRouter>,
-          )
-          expect(container.firstChild).toMatchInlineSnapshot(`
+  test('render missions', () => {
+    const { container } = render(
+      <MemoryRouter>
+        <Provider store={store}>
+          <Mission />
+        </Provider>
+      </MemoryRouter>,
+    );
+    expect(container.firstChild).toMatchInlineSnapshot(`
 <table
   class="mission-container"
 >
@@ -94,17 +94,17 @@ describe('Render All Components', () => {
   </thead>
 </table>
 `);
-      });
+  });
 
-            test('render Profile', () => {
-              const { container, getByText } = render(
-                <MemoryRouter>
-                    <Provider store={store}>
-                    <Profile />
-                    </Provider>
-                </MemoryRouter>,
-              )
-              expect(container.firstChild).toMatchInlineSnapshot(`
+  test('render Profile', () => {
+    const { container } = render(
+      <MemoryRouter>
+        <Provider store={store}>
+          <Profile />
+        </Provider>
+      </MemoryRouter>,
+    );
+    expect(container.firstChild).toMatchInlineSnapshot(`
 <section
   class="profile-container"
 >
@@ -148,21 +148,21 @@ describe('Render All Components', () => {
   </table>
 </section>
 `);
-          });
+  });
 
-                test('render Rockets', () => {
-                  const { container, getByText } = render(
-                    <MemoryRouter>
-                        <Provider store={store}>
-                        <Rocket />
-                        </Provider>
-                    </MemoryRouter>,
-                  )
-                  expect(container.firstChild).toMatchInlineSnapshot(`
+  test('render Rockets', () => {
+    const { container } = render(
+      <MemoryRouter>
+        <Provider store={store}>
+          <Rocket />
+        </Provider>
+      </MemoryRouter>,
+    );
+    expect(container.firstChild).toMatchInlineSnapshot(`
 <ul
   class="rocket-container"
   data-projection-id="1"
 />
 `);
-              });
-                })
+  });
+});
