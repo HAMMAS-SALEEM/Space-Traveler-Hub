@@ -18,7 +18,7 @@ const rocketReducer = (state = initialState, action) => {
       return [...state, ...action.playload];
     case JOIN_ROCKET:
       return state.map((rocket) => {
-        if (rocket.id === action.payload.id) {
+        if (rocket.id === +action.payload) {
           return { ...rocket, reserved: !rocket.reserved };
         }
         return rocket;

@@ -8,7 +8,7 @@ const Mission = () => {
   const dispatch = useDispatch();
   const joinRocketHandler = (e) => {
     const { id } = e.target;
-    dispatch(joinRocket({ id }));
+    dispatch(joinRocket(id));
   };
   useEffect(() => {
     fetch('https://api.spacexdata.com/v3/rockets')
