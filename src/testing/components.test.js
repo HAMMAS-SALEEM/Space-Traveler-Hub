@@ -1,15 +1,16 @@
 import React from "react";
 import { MemoryRouter } from 'react-router-dom';
-import { render, fireEvent, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-
+import { Provider } from 'react-redux';
+import store from '../Redux/configureStore';
 import Mission from '../components/Mission';
 import Nav from '../components/Nav';
-// import Profile from '../components/Profile';
-// import Rocket from '../components/Rocket';
+import Profile from '../components/Profile';
+import Rocket from '../components/Rocket';
 
-describe('Navbar Test', () => {
-    test('render nav bar', () => {
+describe('Render All Components', () => {
+    test('render navbar', () => {
       const { container, getByText } = render(
         <MemoryRouter>
           <Nav />
@@ -62,4 +63,106 @@ describe('Navbar Test', () => {
 </nav>
 `);
   });
-    })
+
+        test('render missions', () => {
+          const { container, getByText } = render(
+            <MemoryRouter>
+                <Provider store={store}>
+                <Mission />
+                </Provider>
+            </MemoryRouter>,
+          )
+          expect(container.firstChild).toMatchInlineSnapshot(`
+<table
+  class="mission-container"
+>
+  <thead>
+    <tr>
+      <th>
+        Mission
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        Status
+      </th>
+      <th>
+         
+      </th>
+    </tr>
+  </thead>
+</table>
+`);
+      });
+
+            test('render Profile', () => {
+              const { container, getByText } = render(
+                <MemoryRouter>
+                    <Provider store={store}>
+                    <Profile />
+                    </Provider>
+                </MemoryRouter>,
+              )
+              expect(container.firstChild).toMatchInlineSnapshot(`
+<section
+  class="profile-container"
+>
+  <table
+    class="profile-mission-container"
+  >
+    <thead>
+      <tr>
+        <th
+          class="table-heading"
+        >
+          <h2
+            class="h2"
+          >
+            Missions
+          </h2>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      class="profile-table-body"
+    />
+  </table>
+  <table
+    class="profile-rocket-container"
+  >
+    <thead>
+      <tr>
+        <th
+          class="table-heading"
+        >
+          <h2
+            class="h2"
+          >
+            Rockets
+          </h2>
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</section>
+`);
+          });
+
+                test('render Rockets', () => {
+                  const { container, getByText } = render(
+                    <MemoryRouter>
+                        <Provider store={store}>
+                        <Rocket />
+                        </Provider>
+                    </MemoryRouter>,
+                  )
+                  expect(container.firstChild).toMatchInlineSnapshot(`
+<ul
+  class="rocket-container"
+  data-projection-id="1"
+/>
+`);
+              });
+                })
