@@ -1,0 +1,65 @@
+.mission-container {
+  border-collapse: collapse;
+}
+
+h2 {
+  font-size: 0.8rem;
+}
+
+th,
+td {
+  border: 1px solid rgb(151, 151, 151);
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+.mission-name {
+  vertical-align: text-top;
+  width: 130px;
+}
+
+.mission-description {
+  color: rgb(80, 80, 80);
+  font-size: 12px;
+  font-weight: 510;
+}
+
+.non-member-badge,
+.member-badge,
+.leave-mission-btn,
+.join-mission-btn {
+  width: 100px;
+  height: 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  border: none;
+}
+
+.non-member-badge {
+  background-color: rgb(116, 116, 116);
+  color: white;
+}
+
+.member-badge {
+  background-color: #1c94b3;
+  color: white;
+}
+
+.leave-mission-btn,
+.join-mission-btn {
+  height: 32px;
+  background: none;
+}
+
+.join-mission-btn {
+  border: 1px solid grey;
+}
+
+.leave-mission-btn {
+  border: 1px solid rgb(255, 70, 70);
+  color: rgb(255, 70, 70);
+}
