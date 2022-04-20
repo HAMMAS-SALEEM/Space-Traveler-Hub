@@ -36,8 +36,8 @@ const Mission = () => {
           <tr className="mission-piece">
             <td className="mission-name"><h2>{mission.mission_name}</h2></td>
             <td className="mission-description">{mission.description}</td>
-            <td><button type="button" className={mission.reserved ? 'member-badge' : 'non-member-badge'} disabled>{mission.reserved ? 'Active Member' : 'Not A Member'}</button></td>
-            <td>
+            <td className="mission-center"><button type="button" className={mission.reserved ? 'member-badge' : 'non-member-badge'} disabled>{mission.reserved ? 'Active Member' : 'Not A Member'}</button></td>
+            <td className="mission-center">
               <button
                 type="button"
                 onClick={joinMissionHandler}

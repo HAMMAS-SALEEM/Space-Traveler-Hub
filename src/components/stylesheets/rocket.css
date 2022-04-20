@@ -27,6 +27,7 @@
 
 .rocket-description {
   font-weight: 600;
+  line-height: 22px;
 }
 
 .reserve-badge {
@@ -41,7 +42,6 @@
 .reserve-btn,
 .cancel-reservation-btn {
   font-size: 12px;
-  padding: 5px;
   border: none;
   border-radius: 5px;
 }
@@ -50,6 +50,7 @@
   width: 100px;
   background: #3083ff;
   color: white;
+  padding: 10px 7px;
 }
 
 .cancel-reservation-btn {
@@ -57,4 +58,5 @@
   background: none;
   color: grey;
   border: 1px solid grey;
+  padding: 10px 0;
 }
