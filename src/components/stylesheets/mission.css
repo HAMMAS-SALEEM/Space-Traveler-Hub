@@ -10,6 +10,7 @@ th,
 td {
   border: 1px solid rgb(151, 151, 151);
   border-collapse: collapse;
+  padding: 20px;
 }
 
 th {
@@ -21,10 +22,15 @@ th {
   width: 130px;
 }
 
+.mission-name h2 {
+  font-size: 15px;
+}
+
 .mission-description {
   color: rgb(80, 80, 80);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 510;
+  width: 70%;
 }
 
 .non-member-badge,
@@ -39,14 +45,17 @@ th {
   border: none;
 }
 
+.non-member-badge,
+.member-badge {
+  color: white;
+}
+
 .non-member-badge {
   background-color: rgb(116, 116, 116);
-  color: white;
 }
 
 .member-badge {
   background-color: #1c94b3;
-  color: white;
 }
 
 .leave-mission-btn,
